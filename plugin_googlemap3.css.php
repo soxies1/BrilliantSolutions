@@ -1,0 +1,1 @@
+.map img,.svPanel img{border:0px;box-shadow:none;margin:0px!important;padding:0px!important;max-width:none!important;background:none!important;}.directions{clear:left;}.adp-directions{width:100%;}.adp-placemark{width:100%;}.controlDiv{padding:5px;}
