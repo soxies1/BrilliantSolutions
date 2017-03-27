@@ -74,7 +74,7 @@ body {
   font-family: "merriweather-regular", serif;
   font-size: 1.6rem;
   line-height: 3rem;
-  color: #737373;
+  color: @b-light-grey;
 }
 
 /**
@@ -815,6 +815,11 @@ header {
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+#header-trans{
+  background: transparent !important;
+}
+
 header .row {
   width: auto;
   height: 66px;
@@ -849,6 +854,7 @@ header .logo a {
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+
 .sticky {
   position: fixed;
   background: #14171c;
@@ -1150,13 +1156,14 @@ a.menu-toggle {
  */
 
 #intro {
-  background: #14181E url(../images/intro-bg.jpg) no-repeat center;
+  background: #14181E url(../images/mockup-img/splash.jpg) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   width: 100%;
   height: 100%;
   min-height: 720px;
+  display: table;
   display: table;
   position: relative;
 }
@@ -1523,12 +1530,92 @@ a.menu-toggle {
 
 /**
  * ===================================================================
- * features section
+ * about section
  *
  * -------------------------------------------------------------------
  */
 
-#features {
+#about {
+  background: @b-white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  /*color: white;*/
+}
+#about .section-intro h1 {
+  /*color: white;*/
+}
+#about .section-intro h5 {
+  /*color: rgba(255, 255, 255, 0.5);*/
+}
+#about .section-intro p {
+  /*color: rgba(255, 255, 255, 0.7);*/
+}
+.about-content {
+  max-width: 1200px;
+}
+.about-list {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+.about-list .feature {
+  margin-bottom: 1.2rem;
+  padding: 0 32px;
+}
+.about-list .icon {
+  display: inline-block;
+  margin-bottom: 2.1rem;
+}
+.about-list .icon i {
+  font-size: 4.8rem;
+}
+.about-list .h05 {
+  font-size: 1.7rem;
+  line-height: 1.765;
+  color: @b-grey;
+  margin-bottom: 1.8rem;
+}
+
+.about-list .h05:hover {
+  color: @b-yellow;
+}
+
+/**
+ * responsive:
+ * features
+ * -
+ */
+
+@media only screen and (max-width:768px) {
+  .about-content {
+    max-width: 600px;
+  }
+  .about-list .feature {
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width:600px) {
+  .about-list .feature {
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .about-list .feature {
+    padding: 0;
+  }
+}
+
+
+/**
+ * ===================================================================
+ * advertising section
+ *
+ * -------------------------------------------------------------------
+ */
+
+#advertising {
   background: @b-back-black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1537,34 +1624,34 @@ a.menu-toggle {
   padding-bottom: 12rem;
   /*color: white;*/
 }
-#features .section-intro h1 {
-  /*color: white;*/
+#advertising .section-intro h1 {
+  color: @b-white;
 }
-#features .section-intro h5 {
+#advertising .section-intro h5 {
   /*color: rgba(255, 255, 255, 0.5);*/
 }
-#features .section-intro p {
-  /*color: rgba(255, 255, 255, 0.7);*/
+#advertising .section-intro p {
+  color: @b-light-grey;
 }
-.features-content {
+.advertising-content {
   max-width: 1200px;
 }
-.features-list {
+.advertising-list {
   margin-top: 1.2rem;
   text-align: center;
 }
-.features-list .feature {
+.advertising-list .feature {
   margin-bottom: 1.2rem;
   padding: 0 32px;
 }
-.features-list .icon {
+.advertising-list .icon {
   display: inline-block;
   margin-bottom: 2.1rem;
 }
-.features-list .icon i {
+.advertising-list .icon i {
   font-size: 4.8rem;
 }
-.features-list .h05 {
+.advertising-list .h05 {
   font-size: 1.7rem;
   line-height: 1.765;
   color: @b-yellow;
@@ -1578,20 +1665,95 @@ a.menu-toggle {
  */
 
 @media only screen and (max-width:768px) {
-  .features-content {
+  .advertising-content {
     max-width: 600px;
   }
-  .features-list .feature {
+  .advertising-list .feature {
     padding: 0 15px;
   }
 }
 @media only screen and (max-width:600px) {
-  .features-list .feature {
+  .advertising-list .feature {
     padding: 0 10px;
   }
 }
 @media only screen and (max-width:400px) {
-  .features-list .feature {
+  .advertising-list .feature {
+    padding: 0;
+  }
+}
+
+/**
+ * ===================================================================
+ * ceiling section
+ *
+ * -------------------------------------------------------------------
+ */
+
+#ceiling {
+  background: @b-back-black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  /*color: white;*/
+}
+#ceiling .section-intro h1 {
+  color: @b-white;
+}
+#ceiling .section-intro h5 {
+  /*color: rgba(255, 255, 255, 0.5);*/
+}
+#ceiling .section-intro p {
+  color: @b-light-grey;
+}
+.ceiling-content {
+  max-width: 1200px;
+}
+.ceiling-list {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+.ceiling-list .feature {
+  margin-bottom: 1.2rem;
+  padding: 0 32px;
+}
+.ceiling-list .icon {
+  display: inline-block;
+  margin-bottom: 2.1rem;
+}
+.ceiling-list .icon i {
+  font-size: 4.8rem;
+}
+.ceiling-list .h05 {
+  font-size: 1.7rem;
+  line-height: 1.765;
+  color: @b-yellow;
+  margin-bottom: 1.8rem;
+}
+
+/**
+ * responsive:
+ * features
+ * -
+ */
+
+@media only screen and (max-width:768px) {
+  .ceiling-content {
+    max-width: 600px;
+  }
+  .ceiling-list .feature {
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width:600px) {
+  .ceiling-list .feature {
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .ceiling-list .feature {
     padding: 0;
   }
 }
@@ -2386,10 +2548,6 @@ footer ul li {
   text-align: left;
 }
 
-#ceiling{
-  background: white;
-  padding-top: 12rem;
-}
 
 
 /*
