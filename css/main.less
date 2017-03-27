@@ -846,7 +846,7 @@ header .logo a {
   color: transparent;
   width: 42px;
   height: 42px;
-  background: url("../images/logo.png") no-repeat center;
+  background: url("../images/mockup-img/logo.png") no-repeat center;
   background-size: 42px 42px;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -1261,6 +1261,18 @@ a.menu-toggle {
     font-size: 4.2rem;
     max-width: 550px;
   }
+
+  .intro-content .with-bottom-line:after{
+    display: block;
+    background-color: @b-yellow;
+    width: 120px;
+    height: 3px;
+    content: '\0020';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -60px;
+  }
   .intro-content h5 {
     font-size: 1.5rem;
     letter-spacing: .15rem;
@@ -1412,40 +1424,40 @@ a.menu-toggle {
 
 /**
  * ===================================================================
- * process section
+ * contact section
  *
  * -------------------------------------------------------------------
  */
 
-#process {
+#contact {
   background: #FFFFFF;
   padding-top: 12rem;
   padding-bottom: 15rem;
   overflow: hidden;
 }
-.process-content {
+.contact-content {
   position: relative;
   text-align: center;
 }
-.process-content .right-side,
-.process-content .left-side,
-.process-content .image-part {
+.contact-content .right-side,
+.contact-content .left-side,
+.contact-content .image-part {
   width: 33.33333%;
   font-size: 15px;
   line-height: 27px;
 }
-.process-content .right-side, .process-content .left-side {
+.contact-content .right-side, .process-content .left-side {
   padding: 0 6% 24px;
   position: absolute;
   top: 0;
 }
-.process-content .right-side {
+.contact-content .right-side {
   right: 0;
 }
-.process-content .left-side {
+.contact-content .left-side {
   left: 0;
 }
-.process-content .image-part {
+.contact-content .image-part {
   margin: 0 auto;
   height: 660px;
   background-image: url("../images/appdesign.jpg");
@@ -1455,7 +1467,7 @@ a.menu-toggle {
   -moz-background-size: contain;
   background-size: contain;
 }
-.process-content .item[data-item]::before {
+.contact-content .item[data-item]::before {
   background: #38424e;
   color: #FFFFFF;
   border-radius: 100%;
@@ -1470,7 +1482,7 @@ a.menu-toggle {
   vertical-align: middle;
   margin-bottom: 1.5rem;
 }
-.process-content h5 {
+.contact-content h5 {
   color: @b-yellow;
   font-size: 1.6rem;
   line-height: 1.875;
@@ -1485,20 +1497,20 @@ a.menu-toggle {
  */
 
 @media only screen and (max-width:1024px) {
-  .process-content .right-side, .process-content .left-side {
+  .contact-content .right-side, .contact-content .left-side {
     padding: 0 3% 24px;
     width: 35%;
   }
-  .process-content .image-part {
+  .contact-content .image-part {
     height: 600px;
     width: 30%;
   }
 }
 @media only screen and (max-width:768px) {
-  #process {
+  #contact {
     padding-bottom: 27rem;
   }
-  .process-content .right-side, .process-content .left-side {
+  .contact-content .right-side, .contact-content .left-side {
     position: static;
     width: 100%;
     max-width: 480px;
@@ -1508,7 +1520,7 @@ a.menu-toggle {
     margin-right: auto;
     padding-bottom: 0;
   }
-  .process-content .image-part {
+  .contact-content .image-part {
     width: 300px;
     position: absolute;
     bottom: -630px;
@@ -1517,10 +1529,10 @@ a.menu-toggle {
   }
 }
 @media only screen and (max-width:400px) {
-  #process {
+  #contact {
     padding-bottom: 21rem;
   }
-  .process-content .image-part {
+  .contact-content .image-part {
     width: 230px;
     bottom: -540px;
     margin-left: -115px;
