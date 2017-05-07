@@ -2502,6 +2502,12 @@ footer ul li {
 .contact-info {
   text-align: left;
 }
+.placeholder-img {
+  width: 100%;
+  background: rgba(20, 20, 20, 0.8);
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
 /*
 menu-font yellow: #f9d900
 menu-font grey: #687672
